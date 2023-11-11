@@ -53,7 +53,8 @@ db.serialize(() => {
 });
 
 function getCounts() {
-  db.each("SELECT * from visitor", (err, row) => {
+  db.each("SELECT * from visitors", (err, row) => {
+    console.log("err", err);
     console.log(row);
   });
 }
